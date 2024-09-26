@@ -25,7 +25,7 @@ $cyan CopyRight By Haxorsec@2024$white"
 echo "==================================================================================
 "
 
-read -p "Your IP (e.g., 192.168.1): " ip
+read -p "Victim IP (e.g., 192.168.1): " ip
 
 for i in $(seq 1 255); do
     if nc -v -n -z -w 1 "$ip.$i" 22 2>&1 | grep -q "succeeded"; then
